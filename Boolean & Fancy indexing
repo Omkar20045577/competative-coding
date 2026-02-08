@@ -1,0 +1,13 @@
+import numpy as np
+arr = np.random.randint(50, 500, size=20) 
+print("Original Array:")
+print(arr) greater_than_300 = arr[arr > 300]
+print("\nElements > 300 (Boolean indexing):")
+print(greater_than_300) 
+odd_numbers = arr[arr % 2 != 0]
+print("\nOdd numbers (Boolean indexing):")
+print(odd_numbers) 
+indices = [2, 4, 9, 15]
+fancy_selected = arr[indices]
+print("\nElements at positions 2, 4, 9 & 15 (Fancy indexing):")
+print(fancy_selected)

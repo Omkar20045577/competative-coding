@@ -1,0 +1,19 @@
+import numpy as np 
+arr = np.array([6, 3, 10, 25, 4, 15, 2])
+print("Original Array:") 
+print(arr) 
+arr_modified = arr.copy() 
+arr_modified[arr_modified > 10] = 50 
+print("\nArray After applying condition (values > 10 set to 50):") 
+print(arr_modified)
+arr_modified2 = arr.copy() 
+arr_modified2[arr_modified2 < 5] = 15
+print("\nArray After applying condition (values < 5 set to 15):")
+print(arr_modified2) 
+arr_modified3 = arr.copy() 
+arr_modified3[arr_modified3 == 10] = 7
+print("\nArray After applying condition (10 replaced with 7):") 
+print(arr_modified3) 
+arr_modified4 = np.where(arr > 20, 100, np.where(arr < 5, 0, arr)) 
+print("\nArray After multiple conditions (values > 20 → 100, values < 5 → 0):")
+print(arr_modified4) 

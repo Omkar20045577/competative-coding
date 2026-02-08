@@ -1,0 +1,7 @@
+import numpy as np  
+arr = [12, 6, 6, 3, 9, 3, 15, 12, 18, 9]
+sorted_arr = sorted(arr)  
+unique_elements = sorted(set(arr)) 
+print("Original Array:", arr)  
+print("Sorted 	Array:", 	sorted_arr) 
+print("Unique Elements:", unique_elements) 

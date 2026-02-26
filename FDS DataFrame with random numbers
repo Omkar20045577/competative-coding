@@ -1,0 +1,11 @@
+import pandas as pd  
+ import numpy as np  
+ 
+np.random.seed(42) 
+ df = pd.DataFrame(np.random.randn(6, 3), columns=['A', 'B', 'C'])   print("DataFrame:")  
+print(df)   
+ 
+print("\nDescriptive Statistics:")  print("Mean:\n", df.mean()) 
+ print("\nMedian:\n", df.median())  print("\nStandard Deviation:\n", df.std())   print("\nMinimum:\n", df.min())   print("\nMaximum:\n", df.max()) 
+ 
+ 

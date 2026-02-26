@@ -1,0 +1,23 @@
+import pandas as pd
+data = { 
+    'Name': ['Ravi', 'sai', 'teja', 'Raju', 'Chandu'], 
+    'Department': ['HR', 'IT', 'Finance', 'IT', 'HR'], 
+    'Salary': [55000, 63000, 60000, 70000, 65000] 
+} 
+
+df = pd.DataFrame(data) 
+print("Original DataFrame:")
+print(df)
+
+asc_salary = df.sort_values(by='Salary', ascending=True)
+print("\nSorted by Salary (Ascending):")
+print(asc_salary)
+
+desc_salary = df.sort_values(by='Salary', ascending=False)
+print("\nSorted by Salary (Descending):")
+print(desc_salary)
+
+df['Rank'] = df['Salary'].rank(ascending=False)
+print("\nDataFrame with Salary Rank:")
+print(df) 
+ 

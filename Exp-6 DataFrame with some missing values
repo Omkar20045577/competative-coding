@@ -1,0 +1,25 @@
+import pandas as pd
+import numpy as np 
+# Create a DataFrame with missing values
+df = pd.DataFrame({ 'A': [5, 8, np.nan, 9], 
+    'B': [6, np.nan, 4, 1], 
+    'C': [np.nan, 12, 17, 15] })
+print("Original DataFrame:")
+print(df) 
+# -----------------------------------------
+# Method 1: Filtering out missing data 
+# -----------------------------------------
+df_dropped = df.dropna()
+# removes rows with ANY missing values
+df_dropped_all = df.dropna(how='all')
+# removes rows where ALL values are missing
+print("\nAfter Dropping Rows with Missing Values:")
+print(df_dropped) 
+# ----------------------------------------- 
+# Method 2: Filling missing values
+ # -----------------------------------------
+df_filled = df.fillna({ 
+    'A': df['A'].mean(),     # fill with column mean 
+    'B': df['B'].median(),   # fill with column median 
+    'C': 0                   # fill with a constant 
+}) 
